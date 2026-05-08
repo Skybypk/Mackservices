@@ -1,0 +1,20 @@
+{
+  "style": "new-york",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "src/api/components/utils/index.tsx",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@/api/components",
+    "utils": "@/api/components/lib/utils",
+    "ui": "@/api/components/ui",
+    "lib": "@/api/components/lib",
+    "hooks": "@/api/components/hooks"
+  },
+  "iconLibrary": "lucide"
+}
