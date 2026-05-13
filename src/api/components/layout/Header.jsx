@@ -5,8 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const services = [
   { name: 'HVAC Maintenance', path: '/services/hvac-maintenance', icon: Wind, desc: 'Commercial climate control & preventive maintenance' },
-  { name: 'Professional Flooring', path: '/services/flooring', icon: Layers, desc: 'Hardwood, tile, laminate & vinyl installation' },
-  { name: 'Kitchen & Bath Renovation', path: '/services/renovation', icon: Hammer, desc: 'Complete kitchen and bathroom transformations' },
   { name: 'Construction & Repairs', path: '/services/repairs', icon: Wrench, desc: 'Structural repairs, drywall, roofing solutions' },
   { name: 'Structural Steelworks', path: '/services/steelworks', icon: HardHat, desc: 'Steel fabrication, welding & reinforcement' },
 ];
@@ -49,20 +47,22 @@ export default function Header() {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-xl shadow-sm border-b border-border' : 'bg-white border-b border-border'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-1 font-heading text-3xl font-extrabold tracking-tight">
-            <span className="text-[#0A0A0B]">Mac</span>
-            <span className="text-[#00E5FF]">Services</span>
-          </Link>
+        <div className="relative flex items-center justify-between h-14 lg:h-16 -translate-y-2">
+          {/* Logo - Left aligned */}
+          <div className="flex-shrink-0 z-10">
+            <Link to="/" className="flex items-center gap-1 font-heading text-2xl lg:text-3xl font-extrabold tracking-tight">
+              <span className="text-[#0A0A0B]">Mack</span>
+              <span className="text-[#00E5FF]">Services</span>
+            </Link>
+          </div>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          {/* Desktop Nav - Absolutely Centered */}
+          <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
             {navLinks.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${location.pathname === link.path ? 'text-[#0A0A0B] bg-secondary' : 'text-muted-foreground hover:text-[#0A0A0B] hover:bg-secondary/60'}`}
+                className={`px-3 py-2 text-sm font-semibold transition-colors ${location.pathname === link.path ? 'text-[#0A0A0B]' : 'text-muted-foreground hover:text-[#0A0A0B]'}`}
               >
                 {link.name}
               </Link>
@@ -76,9 +76,9 @@ export default function Header() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors ${location.pathname.startsWith('/services') ? 'text-[#0A0A0B] bg-secondary' : 'text-muted-foreground hover:text-[#0A0A0B] hover:bg-secondary/60'}`}
+                className={`flex items-center gap-1 px-3 py-2 text-sm font-semibold transition-colors ${location.pathname.startsWith('/services') ? 'text-[#0A0A0B]' : 'text-muted-foreground hover:text-[#0A0A0B]'}`}
               >
-                Our Services
+                Our Service
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
@@ -89,7 +89,7 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 8, scale: 0.97 }}
                     transition={{ duration: 0.2, ease: 'easeOut' }}
-                    className="absolute top-full right-0 mt-2 w-[420px] bg-white rounded-xl shadow-2xl border border-border overflow-hidden"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[420px] bg-white rounded-xl shadow-2xl border border-border overflow-hidden"
                   >
                     <div className="p-2">
                       <div className="px-3 py-2 mb-1">
@@ -121,11 +121,11 @@ export default function Header() {
             </div>
           </nav>
 
-          {/* CTA + Mobile Toggle */}
-          <div className="flex items-center gap-3">
+          {/* CTA + Mobile Toggle - Right aligned */}
+          <div className="flex items-center gap-3 z-10">
             <Link
               to="/contact"
-              className="hidden lg:inline-flex items-center px-5 py-2.5 bg-[#0A0A0B] text-white text-sm font-semibold rounded-lg hover:bg-[#0A0A0B]/90 transition-all animate-pulse-glow"
+              className="hidden lg:inline-flex items-center px-6 py-2.5 bg-[#0A0A0B] text-white text-sm font-bold rounded-lg hover:bg-[#0A0A0B]/90 transition-all shadow-lg hover:shadow-[#00E5FF]/10"
             >
               Get Free Quote
             </Link>
@@ -164,7 +164,7 @@ export default function Header() {
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                 className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-muted-foreground rounded-lg hover:bg-secondary/60"
               >
-                Our Services
+                Our Service
                 <ChevronDown className={`w-4 h-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
               </button>
 

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function WhatsAppBubble() {
   const phoneNumber = '601121142177';
-  const message = encodeURIComponent("Hi MacServices! I'm interested in your services.");
+  const message = encodeURIComponent("Hi MackServices! I'm interested in your services.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (

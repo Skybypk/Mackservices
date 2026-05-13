@@ -43,7 +43,7 @@ const steps = [
 ];
 
 const testimonials = [
-  { name: 'Mr. Azman Razali', role: 'Factory Owner, Shah Alam', quote: 'MacServices designed and erected our 4,000sqm factory steel structure in just 6 weeks. Outstanding quality and zero safety incidents throughout the project.', result: '4,000sqm industrial steel structure' },
+  { name: 'Mr. Azman Razali', role: 'Factory Owner, Shah Alam', quote: 'MackServices designed and erected our 4,000sqm factory steel structure in just 6 weeks. Outstanding quality and zero safety incidents throughout the project.', result: '4,000sqm industrial steel structure' },
   { name: 'Kevin Fong', role: 'Developer, Setia Alam', quote: 'The custom steel staircases and mezzanine they fabricated for our showroom are a real centrepiece. Exceptional craftsmanship and their engineers were always responsive.', result: 'Showroom mezzanine & steel staircase' },
   { name: 'Puan Rohani', role: 'School Principal, PJ', quote: 'They reinforced our aging school building structure efficiently and with minimal disruption to school operations. We felt safe throughout the process.', result: 'Structural reinforcement, 3-storey school' },
 ];
@@ -176,7 +176,7 @@ export default function Steelworks() {
       {/* Why Us */}
       <section className="py-20 bg-[#F5F7F9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading label="Why MacServices" title="Why Choose Us for Steelworks" />
+          <SectionHeading label="Why MackServices" title="Why Choose Us for Steelworks" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
             {reasons.map((r, i) => {
               const Icon = r.icon;

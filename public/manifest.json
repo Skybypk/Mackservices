@@ -1,6 +1,6 @@
 {
-  "name": "MacServices",
-  "short_name": "MacServices",
+  "name": "MackServices",
+  "short_name": "MackServices",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0A0A0B",

@@ -3,16 +3,19 @@ import HomeHero from '../components/home/HomeHero';
 import AboutPreview from '../components/home/aboutpreview';
 import ServicesGrid from '../components/home/ServicesGrid';
 import HomeQuoteForm from '../components/home/HomeQuoteForm';
+import HomeNotForSection from '../components/home/HomeNotForSection';
+import HomeNeglectRisks from '../components/home/HomeNeglectRisks';
+import WhyTrustSection from '../components/hvac/WhyTrustSection';
 import CTABanner from '../components/shared/CTABanner';
 import heroImage from '@/assets/images/hero.jpg';
 import workImage from '@/assets/images/home-work-sub-hero.jpeg';
 import pipeImage from '@/assets/images/home-pipe.jpeg';
+import constructionBanner from '@/assets/images/construction-&-repairs-banner.jpg';
+import steelworksBanner from '@/assets/images/Structural- Steelworks-banner.jpg';
 
 const serviceImages = [
-  'https://media.base44.com/images/public/69f4aeab66d01b9a65c3246b/c98f6c4a8_generated_image.png',
-  'https://media.base44.com/images/public/69f4aeab66d01b9a65c3246b/e449c9a78_generated_image.png',
-  pipeImage,
-  'https://media.base44.com/images/public/69f4aeab66d01b9a65c3246b/025491f94_generated_image.png',
+  constructionBanner,
+  steelworksBanner,
 ];
 
 export default function HomePage() {
@@ -22,9 +25,12 @@ export default function HomePage() {
       <AboutPreview workImage={workImage} />
       <ServicesGrid images={serviceImages} />
       <HomeQuoteForm />
+      <HomeNotForSection />
+      <HomeNeglectRisks />
+      <WhyTrustSection />
       <CTABanner 
         title="Ready to Start Your Project?" 
-        description="Join 500+ satisfied clients who trust MacServices for their construction and maintenance needs."
+        description="Join 500+ satisfied clients who trust MackServices for their construction and maintenance needs."
       />
     </div>
   );

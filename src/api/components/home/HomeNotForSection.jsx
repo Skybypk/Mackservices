@@ -1,6 +1,5 @@
 import React from 'react';
-import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
-import SectionHeading from '../shared/SectionHeading';
+import { XCircle, CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const forYou = [
@@ -18,15 +17,12 @@ const notForYou = [
   'One-time service calls',
 ];
 
-export default function ServiceFitSection() {
+export default function HomeNotForSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          label="Eligibility"
-          title="Is This Service Right for You?"
-        />
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <section className="py-16 bg-[#F5F7F9]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Service Is For Card */}
           <motion.div 
             whileHover={{ y: -5 }}
             className="p-8 bg-white rounded-3xl border border-border shadow-sm hover:shadow-2xl transition-all duration-300"
@@ -45,6 +41,7 @@ export default function ServiceFitSection() {
             </ul>
           </motion.div>
 
+          {/* Service Is NOT For Card */}
           <motion.div 
             whileHover={{ y: -5 }}
             className="p-8 bg-white rounded-3xl border border-border shadow-sm hover:shadow-2xl transition-all duration-300"
@@ -75,4 +72,4 @@ export default function ServiceFitSection() {
       </div>
     </section>
   );
-} 
+}

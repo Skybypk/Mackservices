@@ -4,8 +4,6 @@ import { Phone, Mail, MapPin, Clock, ExternalLink } from 'lucide-react';
 
 const services = [
   { name: 'HVAC Maintenance', path: '/services/hvac-maintenance' },
-  { name: 'Professional Flooring', path: '/services/flooring' },
-  { name: 'Kitchen & Bath Renovation', path: '/services/renovation' },
   { name: 'Construction & Repairs', path: '/services/repairs' },
   { name: 'Structural Steelworks', path: '/services/steelworks' },
 ];
@@ -24,7 +22,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="inline-flex items-center gap-1 font-heading text-xl font-extrabold tracking-tight mb-4">
-              <span className="text-white">Mac</span>
+              <span className="text-white">Mack</span>
               <span className="text-[#00E5FF]">Services</span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
@@ -100,7 +98,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-xs">
-          <p className="text-[#00E5FF] font-medium">© {new Date().getFullYear()} MacServices. All rights reserved.</p>
+          <p className="text-[#00E5FF] font-medium">© {new Date().getFullYear()} MackServices. All rights reserved.</p>
         </div>
       </div>
     </footer>

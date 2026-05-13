@@ -1,7 +1,7 @@
 import React from 'react';
 import { Users, Target, Clock, Cpu } from 'lucide-react';
 import SectionHeading from '../shared/SectionHeading';
-import AnimatedCard from '../shared/AnimatedCard';
+import { motion } from 'framer-motion';
 
 const reasons = [
   { icon: Users, title: '30+ Full-Time Technicians', desc: 'Dedicated in-house team—not subcontractors. Trained in VRV/VRF systems, chillers, AHUs, and centralized HVAC systems.' },
@@ -20,22 +20,24 @@ export default function WhyTrustSection() {
           description="Built for enterprise scale, backed by experienced professionals"
         />
 
-        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((r, i) => {
             const Icon = r.icon;
             return (
-              <AnimatedCard key={r.title} index={i} className="p-6 bg-white rounded-xl border border-border hover:shadow-lg hover:border-[#00E5FF]/20 transition-all group">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-[#0A0A0B] group-hover:bg-[#00E5FF]/10 transition-colors">
-                    <Icon className="w-5 h-5 text-[#00E5FF]" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-bold text-foreground mb-2">{r.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
-                  </div>
+              <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              key={r.title} 
+              className="p-8 bg-white rounded-3xl border border-border hover:border-[#00E5FF]/50 hover:shadow-[0_0_20px_rgba(0,229,255,0.15)] transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-[#0A0A0B] flex items-center justify-center mb-6 group-hover:bg-[#00E5FF] transition-colors duration-300">
+                  <Icon className="w-7 h-7 text-white group-hover:text-[#0A0A0B] transition-colors duration-300" />
                 </div>
-              </AnimatedCard>
-            );
+                <h3 className="font-heading font-bold text-lg text-foreground mb-4 group-hover:text-[#00E5FF] transition-colors duration-300">{r.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
+              </motion.div>            );
           })}
         </div>
       </div>

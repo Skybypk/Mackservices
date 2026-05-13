@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionHeading from '../shared/SectionHeading';
-import AnimatedCard from '../shared/AnimatedCard';
+import { motion } from 'framer-motion';
 
 const steps = [
   { num: '01', title: 'Free Site Audit', desc: 'Our technical team visits your facility to assess your HVAC systems, identify issues, and understand your operational requirements.' },
@@ -18,18 +18,22 @@ export default function ProcessSteps() {
           description="Three steps to worry-free HVAC management"
         />
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto relative">
-          {/* Connector line */}
-          <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-[1px] bg-gradient-to-r from-transparent via-[#00E5FF]/30 to-transparent" />
-
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {steps.map((s, i) => (
-            <AnimatedCard key={s.num} index={i} className="relative text-center p-8 rounded-2xl bg-[#F5F7F9] border border-border hover:border-[#00E5FF]/30 transition-all">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#0A0A0B] text-[#00E5FF] font-mono text-sm font-bold mb-5">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.2 }}
+              key={s.num} 
+              className="relative p-8 rounded-3xl bg-[#F5F7F9] border border-border group hover:border-[#00E5FF]/30 hover:bg-white transition-all duration-300"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-[#0A0A0B] text-[#00E5FF] font-heading text-xl font-bold flex items-center justify-center mb-6 group-hover:bg-[#00E5FF] group-hover:text-[#0A0A0B] transition-all duration-300">
                 {s.num}
               </div>
-              <h3 className="font-heading font-bold text-foreground mb-3">{s.title}</h3>
+              <h3 className="font-heading font-bold text-lg text-foreground mb-4">{s.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-            </AnimatedCard>
+            </motion.div>
           ))}
         </div>
       </div>

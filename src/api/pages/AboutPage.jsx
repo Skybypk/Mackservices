@@ -25,7 +25,7 @@ export default function AboutPage() {
             <p className="font-mono text-xs text-[#00E5FF] tracking-[0.2em] uppercase mb-3">Who We Are</p>
             <h1 className="font-heading text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Our Story & Mission</h1>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-              Founded on the principles of quality and reliability, MacServices has grown from a small local team into a leading construction and maintenance partner for Selangor and Kuala Lumpur.
+              Founded on the principles of quality and reliability, MackServices has grown from a small local team into a leading construction and maintenance partner for Selangor and Kuala Lumpur.
             </p>
           </motion.div>
         </div>
@@ -82,13 +82,13 @@ export default function AboutPage() {
             "Excellence is not an act, but a habit. We've built our reputation on consistent quality, one project at a time."
           </h2>
           <div className="h-px w-20 bg-[#00E5FF]/30 mx-auto mb-6" />
-          <p className="font-heading font-bold text-xl text-white">The MacServices Team</p>
+          <p className="font-heading font-bold text-xl text-white">The MackServices Team</p>
           <p className="text-sm text-[#00E5FF] font-mono tracking-widest uppercase">Since 2014</p>
         </div>
       </section>
 
       <CTABanner 
-        title="Experience the MacServices Difference" 
+        title="Experience the MackServices Difference" 
         description="Let's discuss how our expertise can bring your vision to life or protect your property assets."
       />
     </div>

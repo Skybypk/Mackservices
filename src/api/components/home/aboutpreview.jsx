@@ -34,7 +34,7 @@ export default function AboutPreview({ workImage }) {
               Building Excellence for 10+ Years
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              MacServices has been the trusted choice for residential and commercial construction projects throughout the region. Our commitment to quality, reliability, and customer satisfaction has made us a leader in the construction industry.
+              MackServices has been the trusted choice for residential and commercial construction projects throughout the region. Our commitment to quality, reliability, and customer satisfaction has made us a leader in the construction industry.
             </p>
             <ul className="space-y-2.5 mb-8">
               {highlights.map(h => (

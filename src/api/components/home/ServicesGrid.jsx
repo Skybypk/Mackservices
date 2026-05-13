@@ -7,18 +7,6 @@ import { motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'Professional Flooring',
-    desc: 'Expert installation of hardwood, laminate, tile, and vinyl flooring with precision and attention to detail.',
-    features: ['Hardwood Installation', 'Tile & Stone', 'Laminate & Vinyl', 'Floor Refinishing'],
-    path: '/services/flooring',
-  },
-  {
-    title: 'Kitchen & Bath Renovation',
-    desc: 'Complete kitchen and bathroom transformations that combine functionality with stunning design.',
-    features: ['Custom Cabinetry', 'Countertop Installation', 'Plumbing & Electrical', 'Design Consultation'],
-    path: '/services/renovation',
-  },
-  {
     title: 'Construction & Repairs',
     desc: 'Comprehensive construction services and repairs to maintain and improve your property.',
     features: ['Structural Repairs', 'Drywall & Painting', 'Roofing Solutions', 'Emergency Repairs'],
@@ -104,7 +92,7 @@ export default function ServicesGrid({ images }) {
           <h3 className="font-heading font-bold text-lg mb-2">Need a Custom Solution?</h3>
           <p className="text-sm text-gray-400 mb-4">We specialize in custom projects tailored to your specific needs and vision.</p>
           <a
-            href="https://wa.me/60147172220?text=Hi%20MacServices!%20I%27m%20interested%20in%20scheduling%20a%20consultation."
+            href="https://wa.me/60147172220?text=Hi%20MackServices!%20I%27m%20interested%20in%20scheduling%20a%20consultation."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#00E5FF] text-[#0A0A0B] font-bold rounded-lg hover:bg-[#00E5FF]/90 transition text-sm"

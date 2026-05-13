@@ -11,7 +11,9 @@ export default function Layout() {
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
       <WhatsAppBubble />
-      <TopBar />
+      <div className="mb-6">
+        <TopBar />
+      </div>
       <Header />
       <main className="flex-1">
         <Outlet />

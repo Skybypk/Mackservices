@@ -43,9 +43,9 @@ const steps = [
 ];
 
 const testimonials = [
-  { name: 'Hafiz Roslan', role: 'Building Owner, Cheras', quote: 'After a major storm, our roof was severely damaged. MacServices had a team on-site within 3 hours and completed full repairs within the week. Incredible service.', result: 'Full roof repair after storm damage' },
+  { name: 'Hafiz Roslan', role: 'Building Owner, Cheras', quote: 'After a major storm, our roof was severely damaged. MackServices had a team on-site within 3 hours and completed full repairs within the week. Incredible service.', result: 'Full roof repair after storm damage' },
   { name: 'Cik Salmah', role: 'Homeowner, Klang', quote: 'They fixed cracks in our foundation that other contractors said were impossible. Professional assessment, honest advice, and quality workmanship.', result: 'Foundation crack repair & waterproofing' },
-  { name: 'James Ong', role: 'Property Manager, KL', quote: 'We manage 8 commercial properties and MacServices handles all our maintenance and emergency repairs. Reliable, fast, and excellent value.', result: 'Ongoing property maintenance contract' },
+  { name: 'James Ong', role: 'Property Manager, KL', quote: 'We manage 8 commercial properties and MackServices handles all our maintenance and emergency repairs. Reliable, fast, and excellent value.', result: 'Ongoing property maintenance contract' },
 ];
 
 const repairTypes = ['Structural Repair', 'Drywall & Painting', 'Roof Repair / Replacement', 'Emergency Repair', 'General Maintenance', 'Other'];
@@ -176,7 +176,7 @@ export default function Repairs() {
       {/* Why Us */}
       <section className="py-20 bg-[#F5F7F9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading label="Why MacServices" title="Why Choose Us for Repairs" />
+          <SectionHeading label="Why MackServices" title="Why Choose Us for Repairs" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
             {reasons.map((r, i) => {
               const Icon = r.icon;

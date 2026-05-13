@@ -10,8 +10,6 @@ import { toast } from 'sonner';
 import constructionImage from '@/assets/images/home-constructions.jpg';
 
 const projectTypes = [
-  'Flooring Installation',
-  'Kitchen/Bath Renovation',
   'New Construction',
   'Repairs & Maintenance',
   'Other',

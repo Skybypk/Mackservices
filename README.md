@@ -1,8 +1,8 @@
-# 🚀 MacServices Web Application
+# 🚀 MackServices Web Application
 
 ## 📌 About
 
-Welcome to the **MacServices** project.
+Welcome to the **MackServices** project.
 
 This is a modern React + Vite based web application designed for service-based businesses (HVAC, Flooring, etc.).
 

@@ -14,8 +14,6 @@ import ContactPage from "@/api/services/ContactPage";
 
 // Services
 import HvacMaintenancePage from "@/api/pages/HvacMaintenance";
-import FlooringPage from "@/api/pages/Flooring";
-import RenovationPage from "@/api/pages/Renovation";
 import RepairsPage from "@/api/pages/Repairs";
 import SteelworksPage from "@/api/pages/Steelworks";
 
@@ -33,8 +31,6 @@ const router = createBrowserRouter([
       { path: "/about", element: <AboutPage /> },
       { path: "/contact", element: <ContactPage /> },
       { path: "/services/hvac-maintenance", element: <HvacMaintenancePage /> },
-      { path: "/services/flooring", element: <FlooringPage /> },
-      { path: "/services/renovation", element: <RenovationPage /> },
       { path: "/services/repairs", element: <RepairsPage /> },
       { path: "/services/steelworks", element: <SteelworksPage /> },
     ],
